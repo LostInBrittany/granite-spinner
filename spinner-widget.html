@@ -125,11 +125,8 @@ Polymer({
     }
   },
   ready: function () {
-    console.log("[ready] this.spinnerWidth",this.spinnerWidth);
-    console.log("[ready] this.spinnerHeight",this.spinnerHeight);
   },
   attached: function () {
-    console.log("Attached")
     this.isAttached = true;
   },
   getStyleSpinner: function () {
@@ -138,9 +135,7 @@ Polymer({
     // We need to varify that the component is attached (or at least ready)
     // and then, if shown attribute is present, we display the spinner
     if (this.isAttached && this.shown) {
-      console.log("[ready] this.spinnerWidth",this.spinnerWidth);
-      console.log("[ready] this.spinnerHeight",this.spinnerHeight);
-      console.log("[getStyleSpinner()] display: flex; width: "+this.spinnerWidth+"; height: "+this.spinnerHeight+";")
+      //console.log("[getStyleSpinner()] display: flex; width: "+this.spinnerWidth+"; height: "+this.spinnerHeight+";")
       return "display: flex; width: "+this.spinnerWidth+"; height: "+this.spinnerHeight+";";
     }
     return "display: none;";
