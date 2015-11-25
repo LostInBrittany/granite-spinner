@@ -1,0 +1,26 @@
+{
+  "name": "LostInBrittany/spinner-widget",
+  "version": "1.0.1",
+  "authors": [
+    "Horacio Gonzalez <horacio.gonzalez@gmail.com>"
+  ],
+  "description": "LostInBrittany's pure CSS spinner Polymer web component",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "lostinbrittany",
+    "spinner"
+  ],
+  "main": "spinner-widget.html",
+  "license": "MIT",
+  "homepage": "https://github.com/LostInBrittany/spinner-widget",
+  "ignore": [
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~1.2.0"
+  },
+  "devDependencies": {
+    "bootstrap": "~3.3.2"
+  }
+}
