@@ -14,13 +14,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   :host {
   }
   #container {
+    display: inline-block;
     position: relative;
-    width: 100%;
+    width:100%;
     height: 100%;
   }
   #spinner {
-    width:100%;
-    height: 100%;
     position: absolute;
     display:flex;
     justify-content: center;
@@ -94,13 +93,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 </style>
 <template>
-  <template is="dom-if" if="{{shown}}">
     <div id="container">
-      <div id="spinner">
+      <div id="spinner" style$="{{styleSpinner}}">
         <div class='loading'></div>
       </div>
     </div>
-  </template>
 </template>
 </dom-module>
 
@@ -111,12 +108,42 @@ Polymer({
     shown: {
       type: Boolean,
       value: false
+    },
+    spinnerWidth: {
+      type: String,
+      value: "200px",
+      notify:true
+    },
+    spinnerHeight: {
+      type: String,
+      value: "200px",
+      notify:true
+    },
+    styleSpinner:{
+      type:String,
+      computed: "getStyleSpinner(shown,isAttached)"
     }
   },
   ready: function () {
+    console.log("[ready] this.spinnerWidth",this.spinnerWidth);
+    console.log("[ready] this.spinnerHeight",this.spinnerHeight);
   },
   attached: function () {
-    console.log("shown attribute", this.shown)
+    console.log("Attached")
+    this.isAttached = true;
+  },
+  getStyleSpinner: function () {
+    // getStyleSpinner() is the control function of styleSpinner property,
+    // a computed property based on shown and isAttached
+    // We need to varify that the component is attached (or at least ready)
+    // and then, if shown attribute is present, we display the spinner
+    if (this.isAttached && this.shown) {
+      console.log("[ready] this.spinnerWidth",this.spinnerWidth);
+      console.log("[ready] this.spinnerHeight",this.spinnerHeight);
+      console.log("[getStyleSpinner()] display: flex; width: "+this.spinnerWidth+"; height: "+this.spinnerHeight+";")
+      return "display: flex; width: "+this.spinnerWidth+"; height: "+this.spinnerHeight+";";
+    }
+    return "display: none;";
   }
 })
 </script>

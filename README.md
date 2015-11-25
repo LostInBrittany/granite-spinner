@@ -37,9 +37,11 @@ $ bower install LostInBrittany/spinner-widget --save
 
 ## Attributes
 
-Attribute   | Options   | Default | Description
----         | ---       | ---     | ---
-`show`      | *Boolean* | ``      | `When true, the spinner is shown`
+Attribute       | Options   | Default | Description
+---             | ---       | ---     | ---
+`show`          | *Boolean* | false   | When true, the spinner is shown
+`spinner-width` | *String*  | `500px` | The width of the spinner
+`spinner-height`| *String*  | `500px` | The height of the spinner
 
 
 
