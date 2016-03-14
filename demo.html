@@ -1,0 +1,41 @@
+<!doctype html>
+<!--
+@license MIT
+Copyright (c) 2015 Horacio "LostInBrittany" Gonzalez
+-->
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>spinner-widget test</title>
+
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css" />
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script src="./bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+
+    <link   rel="import" href="./bower_components/polymer/polymer.html">
+    <link   rel="import" href="./bower_components/spinner-widget/spinner-widget.html">
+
+    <style>
+      .spacer-10 { width:100%; height:10px; }
+      .spacer-50 { width:100%; height:50px; }
+      .box { display: inline-block; width:500px; height:500px; border: solid 1px black; border-radius: 20px;}
+    </style>
+  </head>
+
+  <body unresolved>
+    <div class="spacer-50"></div>
+    <div class="container">
+
+      <div class="box">
+        <spinner-widget active="true"></spinner-widget>
+      </div>
+
+    </div>
+
+  </body>
