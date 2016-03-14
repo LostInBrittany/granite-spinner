@@ -85,9 +85,9 @@ Polymer({
     // and then, if shown attribute is present, we display the spinner
     // console.debug("[spinner-widget] _isShown - active: %s, isAttached: %s", this.active, this.isAttached);
     if (this.isAttached && this.active) {
-      this.$.spinner.style.display = "flex";
+      this.$$("#spinner-container").style.display = "flex";
     } else {
-      this.$.spinner.style.display = "none";
+      this.$$("#spinner-container").style.display = "none";
     }
   }
 })
