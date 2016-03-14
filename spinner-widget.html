@@ -45,16 +45,22 @@ Polymer({
       value: 100,
       notify:true
     },
+    color: {
+      type: String,
+      value: "#28b6d8"
+    },
     _shown:{
       type:String,
       computed: "_isShown(active,isAttached)"
-    }
+    },
   },
   ready: function () {
   },
   attached: function () {
     this.$.spinner.style.width = this.size+'px';
     this.$.spinner.style.height = this.size+'px';
+    // this.$.spinner.style.borderLeft = "1.1em solid "+this.color;
+    this.$.spinner.style.borderLeftColor = this.color;
     this.isAttached = true;
   },
   _isShown: function () {

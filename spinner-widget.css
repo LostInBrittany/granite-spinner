@@ -20,71 +20,43 @@ Copyright (c) 2015 Horacio "LostInBrittany" Gonzalez
   height: 100%;
 }
 #spinner {
-
-}
-.loading {
-  font-size: 90px;
+  margin: 60px auto;
+  font-size: 10px;
+  position: relative;
   text-indent: -9999em;
-  overflow: hidden;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  margin: 72px auto;
+
+  border: 1.1em solid rgba(210,210,210, 1);
+  border-left: 1.1em solid #28b6d8;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  -webkit-animation: czdspin 1.7s infinite ease;
-  animation: czdspin 1.7s infinite ease;
+  -webkit-animation: load8 1.25s infinite linear;
+  animation: load8 1.25s infinite linear;
 }
-@-webkit-keyframes czdspin {
+#spinner,
+#spinner:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+
+@-webkit-keyframes load8 {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
-    box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, 0 -0.83em 0 -0.42em #aaaaaa, 0 -0.83em 0 -0.44em #aaaaaa, 0 -0.83em 0 -0.46em #aaaaaa, 0 -0.83em 0 -0.477em #aaaaaa;
-  }
-  5%,
-  95% {
-    box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, 0 -0.83em 0 -0.42em #aaaaaa, 0 -0.83em 0 -0.44em #aaaaaa, 0 -0.83em 0 -0.46em #aaaaaa, 0 -0.83em 0 -0.477em #aaaaaa;
-  }
-  10%,
-  59% {
-    box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, -0.087em -0.825em 0 -0.42em #aaaaaa, -0.173em -0.812em 0 -0.44em #aaaaaa, -0.256em -0.789em 0 -0.46em #aaaaaa, -0.297em -0.775em 0 -0.477em #aaaaaa;
-  }
-  20% {
-    box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, -0.338em -0.758em 0 -0.42em #aaaaaa, -0.555em -0.617em 0 -0.44em #aaaaaa, -0.671em -0.488em 0 -0.46em #aaaaaa, -0.749em -0.34em 0 -0.477em #aaaaaa;
-  }
-  38% {
-    box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, -0.377em -0.74em 0 -0.42em #aaaaaa, -0.645em -0.522em 0 -0.44em #aaaaaa, -0.775em -0.297em 0 -0.46em #aaaaaa, -0.82em -0.09em 0 -0.477em #aaaaaa;
   }
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
-    box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, 0 -0.83em 0 -0.42em #aaaaaa, 0 -0.83em 0 -0.44em #aaaaaa, 0 -0.83em 0 -0.46em #aaaaaa, 0 -0.83em 0 -0.477em #aaaaaa;
   }
 }
-@keyframes czdspin {
+@keyframes load8 {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
-    box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, 0 -0.83em 0 -0.42em #aaaaaa, 0 -0.83em 0 -0.44em #aaaaaa, 0 -0.83em 0 -0.46em #aaaaaa, 0 -0.83em 0 -0.477em #aaaaaa;
-  }
-  5%,
-  95% {
-    box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, 0 -0.83em 0 -0.42em #aaaaaa, 0 -0.83em 0 -0.44em #aaaaaa, 0 -0.83em 0 -0.46em #aaaaaa, 0 -0.83em 0 -0.477em #aaaaaa;
-  }
-  10%,
-  59% {
-    box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, -0.087em -0.825em 0 -0.42em #aaaaaa, -0.173em -0.812em 0 -0.44em #aaaaaa, -0.256em -0.789em 0 -0.46em #aaaaaa, -0.297em -0.775em 0 -0.477em #aaaaaa;
-  }
-  20% {
-    box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, -0.338em -0.758em 0 -0.42em #aaaaaa, -0.555em -0.617em 0 -0.44em #aaaaaa, -0.671em -0.488em 0 -0.46em #aaaaaa, -0.749em -0.34em 0 -0.477em #aaaaaa;
-  }
-  38% {
-    box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, -0.377em -0.74em 0 -0.42em #aaaaaa, -0.645em -0.522em 0 -0.44em #aaaaaa, -0.775em -0.297em 0 -0.46em #aaaaaa, -0.82em -0.09em 0 -0.477em #aaaaaa;
   }
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
-    box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, 0 -0.83em 0 -0.42em #aaaaaa, 0 -0.83em 0 -0.44em #aaaaaa, 0 -0.83em 0 -0.46em #aaaaaa, 0 -0.83em 0 -0.477em #aaaaaa;
   }
 }

@@ -37,10 +37,11 @@ $ bower install LostInBrittany/spinner-widget --save
 
 ## Attributes
 
-Attribute       | Options   | Default | Description
----             | ---       | ---     | ---
-`active`        | *Boolean* | false   | When true, the spinner is shown
-`size`          | *Number*  | `100px` | The size of the spinnerer
+Attribute       | Options   | Default   | Description
+---             | ---       | ---       | ---
+`active`        | *Boolean* | false     | When true, the spinner is shown
+`size`          | *Number*  | `100px`   | The size of the spinner
+`color`          | *String*  | `#28b6d8` | The color of the moving part of the spinner
 
 
 
