@@ -40,6 +40,11 @@ Polymer({
       value: false,
       reflectToAttribute: true,
     },
+    hover: {
+      type: Boolean,
+      value: false,
+      reflectToAttribute: true,
+    },
     size: {
       type: Number,
       value: 100,
@@ -66,6 +71,11 @@ Polymer({
     this.$.spinner.style.height = this.size+'px';
     this.$.spinner.style.borderLeftColor = this.color;
     this.$.spinner.style.borderWidth = this.lineWidth;
+    if (this.hover) {
+      this.$$("#spinner-container").style.position = "absolute";
+    } else {
+      this.$$("#spinner-container").style.position = "relative";
+    }
     this.isAttached = true;
   },
   _isShown: function () {
