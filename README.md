@@ -3,7 +3,7 @@
 A simple, lightweight spinner [Polymer](https://www.polymer-project.org/) web component
 without any other dependencies.
 
-> Polymer 1.2 ready
+> Polymer 1.3 ready
 
 
 ## Install
@@ -20,13 +20,13 @@ $ bower install LostInBrittany/spinner-widget --save
 1. Import Web Components' polyfill (if needed):
 
     ```html
-    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
     ```
 
 2. Import Custom Element:
 
     ```html
-    <link rel="import" href="bower_components/ace-widget/ace-widget.html">
+    <link rel="import" href="bower_components/spinner-widget/spinner-widget.html">
     ```
 
 3. Start using it!
