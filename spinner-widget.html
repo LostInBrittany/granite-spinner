@@ -49,6 +49,11 @@ Polymer({
       type: String,
       value: "#28b6d8"
     },
+    lineWidth: {
+      type: String,
+      value: "1.5em",
+      notify:true
+    },
     _shown:{
       type:String,
       computed: "_isShown(active,isAttached)"
@@ -59,8 +64,8 @@ Polymer({
   attached: function () {
     this.$.spinner.style.width = this.size+'px';
     this.$.spinner.style.height = this.size+'px';
-    // this.$.spinner.style.borderLeft = "1.1em solid "+this.color;
     this.$.spinner.style.borderLeftColor = this.color;
+    this.$.spinner.style.borderWidth = this.lineWidth;
     this.isAttached = true;
   },
   _isShown: function () {
