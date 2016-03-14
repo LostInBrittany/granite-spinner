@@ -32,16 +32,15 @@ $ bower install LostInBrittany/spinner-widget --save
 3. Start using it!
 
     ```html
-    <spinner-widget>Editable code here</spinner-widget>
+    <spinner-widget></spinner-widget>
     ```
 
 ## Attributes
 
 Attribute       | Options   | Default | Description
 ---             | ---       | ---     | ---
-`show`          | *Boolean* | false   | When true, the spinner is shown
-`spinner-width` | *String*  | `500px` | The width of the spinner
-`spinner-height`| *String*  | `500px` | The height of the spinner
+`active`        | *Boolean* | false   | When true, the spinner is shown
+`size`          | *Number*  | `100px` | The size of the spinnerer
 
 
 
