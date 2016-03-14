@@ -1,144 +1,73 @@
 <!--
-@license MIT
-Copyright (c) 2015 Horacio "LostInBrittany" Gonzalez
+    @license MIT
+    Copyright (c) 2015 Horacio "LostInBrittany" Gonzalez
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    Relative paths assume component is being run from inside an app or another component, where dependencies are flat
+    siblings. When this component is run from its own repo (e.g. ui tests, examples), we assume the server is started with
+    'polyserve' (or similar server setup) to enable correct finding of bower dependencies for local runs
+    See https://github.com/PolymerLabs/polyserve
 -->
+<link rel="import" href="../polymer/polymer.html"/>
 
+
+<!--
+Spinner-Widget is a simple,lightweight Polymer web component component used to indicate when data is being loaded, a view is changing,
+or any place a visual indication is needed to show that work is being done for an indefinite period of time.
+
+##### Usage
+    <spinner-widget></spinner-widget>
+@element spinner-widget
+@blurb Element providing an indication of data or a view loading.
+@homepage index.html
+@demo demo.html
+-->
 <dom-module id="spinner-widget">
-<style>
-  :host {
-  }
-  #container {
-    display: inline-block;
-    position: relative;
-    width:100%;
-    height: 100%;
-  }
-  #spinner {
-    position: absolute;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .loading {
-    font-size: 90px;
-    text-indent: -9999em;
-    overflow: hidden;
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
-    margin: 72px auto;
-    -webkit-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-animation: czdspin 1.7s infinite ease;
-    animation: czdspin 1.7s infinite ease;
-  }
-  @-webkit-keyframes czdspin {
-    0% {
-      -webkit-transform: rotate(0deg);
-      transform: rotate(0deg);
-      box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, 0 -0.83em 0 -0.42em #aaaaaa, 0 -0.83em 0 -0.44em #aaaaaa, 0 -0.83em 0 -0.46em #aaaaaa, 0 -0.83em 0 -0.477em #aaaaaa;
-    }
-    5%,
-    95% {
-      box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, 0 -0.83em 0 -0.42em #aaaaaa, 0 -0.83em 0 -0.44em #aaaaaa, 0 -0.83em 0 -0.46em #aaaaaa, 0 -0.83em 0 -0.477em #aaaaaa;
-    }
-    10%,
-    59% {
-      box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, -0.087em -0.825em 0 -0.42em #aaaaaa, -0.173em -0.812em 0 -0.44em #aaaaaa, -0.256em -0.789em 0 -0.46em #aaaaaa, -0.297em -0.775em 0 -0.477em #aaaaaa;
-    }
-    20% {
-      box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, -0.338em -0.758em 0 -0.42em #aaaaaa, -0.555em -0.617em 0 -0.44em #aaaaaa, -0.671em -0.488em 0 -0.46em #aaaaaa, -0.749em -0.34em 0 -0.477em #aaaaaa;
-    }
-    38% {
-      box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, -0.377em -0.74em 0 -0.42em #aaaaaa, -0.645em -0.522em 0 -0.44em #aaaaaa, -0.775em -0.297em 0 -0.46em #aaaaaa, -0.82em -0.09em 0 -0.477em #aaaaaa;
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-      transform: rotate(360deg);
-      box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, 0 -0.83em 0 -0.42em #aaaaaa, 0 -0.83em 0 -0.44em #aaaaaa, 0 -0.83em 0 -0.46em #aaaaaa, 0 -0.83em 0 -0.477em #aaaaaa;
-    }
-  }
-  @keyframes czdspin {
-    0% {
-      -webkit-transform: rotate(0deg);
-      transform: rotate(0deg);
-      box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, 0 -0.83em 0 -0.42em #aaaaaa, 0 -0.83em 0 -0.44em #aaaaaa, 0 -0.83em 0 -0.46em #aaaaaa, 0 -0.83em 0 -0.477em #aaaaaa;
-    }
-    5%,
-    95% {
-      box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, 0 -0.83em 0 -0.42em #aaaaaa, 0 -0.83em 0 -0.44em #aaaaaa, 0 -0.83em 0 -0.46em #aaaaaa, 0 -0.83em 0 -0.477em #aaaaaa;
-    }
-    10%,
-    59% {
-      box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, -0.087em -0.825em 0 -0.42em #aaaaaa, -0.173em -0.812em 0 -0.44em #aaaaaa, -0.256em -0.789em 0 -0.46em #aaaaaa, -0.297em -0.775em 0 -0.477em #aaaaaa;
-    }
-    20% {
-      box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, -0.338em -0.758em 0 -0.42em #aaaaaa, -0.555em -0.617em 0 -0.44em #aaaaaa, -0.671em -0.488em 0 -0.46em #aaaaaa, -0.749em -0.34em 0 -0.477em #aaaaaa;
-    }
-    38% {
-      box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, -0.377em -0.74em 0 -0.42em #aaaaaa, -0.645em -0.522em 0 -0.44em #aaaaaa, -0.775em -0.297em 0 -0.46em #aaaaaa, -0.82em -0.09em 0 -0.477em #aaaaaa;
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-      transform: rotate(360deg);
-      box-shadow: 0 -0.83em 0 -0.4em #aaaaaa, 0 -0.83em 0 -0.42em #aaaaaa, 0 -0.83em 0 -0.44em #aaaaaa, 0 -0.83em 0 -0.46em #aaaaaa, 0 -0.83em 0 -0.477em #aaaaaa;
-    }
-  }
-</style>
-<template>
-    <div id="container">
-      <div id="spinner" style$="{{styleSpinner}}">
-        <div class='loading'></div>
+  <link rel="import" type="css" href="spinner-widget.css"/>
+  <template>
+      <div id="spinner-container">
+        <div id="spinner" class='loading'>
+        </div>
       </div>
-    </div>
-</template>
+  </template>
 </dom-module>
 
 <script>
 Polymer({
   is: 'spinner-widget',
   properties: {
-    shown: {
+    active: {
       type: Boolean,
-      value: false
+      value: false,
+      reflectToAttribute: true,
     },
-    spinnerWidth: {
-      type: String,
-      value: "200px",
+    size: {
+      type: Number,
+      value: 100,
       notify:true
     },
-    spinnerHeight: {
-      type: String,
-      value: "200px",
-      notify:true
-    },
-    styleSpinner:{
+    _shown:{
       type:String,
-      computed: "getStyleSpinner(shown,isAttached)"
+      computed: "_isShown(active,isAttached)"
     }
   },
   ready: function () {
   },
   attached: function () {
+    this.$.spinner.style.width = this.size+'px';
+    this.$.spinner.style.height = this.size+'px';
     this.isAttached = true;
   },
-  getStyleSpinner: function () {
-    // getStyleSpinner() is the control function of styleSpinner property,
-    // a computed property based on shown and isAttached
+  _isShown: function () {
+    // _isShown() is the control function of styleSpinner property,
+    // a computed property based on active and isAttached
     // We need to varify that the component is attached (or at least ready)
     // and then, if shown attribute is present, we display the spinner
-    if (this.isAttached && this.shown) {
-      //console.log("[getStyleSpinner()] display: flex; width: "+this.spinnerWidth+"; height: "+this.spinnerHeight+";")
-      return "display: flex; width: "+this.spinnerWidth+"; height: "+this.spinnerHeight+";";
+    // console.debug("[spinner-widget] _isShown - active: %s, isAttached: %s", this.active, this.isAttached);
+    if (this.isAttached && this.active) {
+      this.$.spinner.style.display = "flex";
+    } else {
+      this.$.spinner.style.display = "none";
     }
-    return "display: none;";
   }
 })
 </script>
