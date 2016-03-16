@@ -59,6 +59,10 @@ Polymer({
       value: "1.5em",
       notify:true
     },
+    containerHeight: {
+      type: Number,
+      value: 150
+    },
     _shown:{
       type:String,
       computed: "_isShown(active,isAttached)"
@@ -67,6 +71,7 @@ Polymer({
   ready: function () {
   },
   attached: function () {
+    console.debug("[spinner-widget] attached - size", this.size)
     this.$.spinner.style.width = this.size+'px';
     this.$.spinner.style.height = this.size+'px';
     this.$.spinner.style.borderLeftColor = this.color;
@@ -76,6 +81,9 @@ Polymer({
     } else {
       this.$$("#spinner-container").style.position = "relative";
     }
+    this.$$("#spinner-container").style.minWidth = this.size+'px';
+    this.$$("#spinner-container").style.minHeight = this.size+'px';
+    this.$$("#spinner-container").style.height = Math.max(this.size, this.containerHeight) +'px';
     this.isAttached = true;
   },
   _isShown: function () {

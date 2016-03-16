@@ -37,13 +37,14 @@ $ bower install LostInBrittany/spinner-widget --save
 
 ## Attributes
 
-Attribute       | Options   | Default   | Description
----             | ---       | ---       | ---
-`active`        | *Boolean* | false     | When true, the spinner is shown
-`hover`         | *Boolean* | false     | When true, the spinner hovers over the underlaying content
-`size`          | *Number*  | `100px`   | The size of the spinner
-`color`         | *String*  | `#28b6d8` | The color of the moving part of the spinner
-`line-width`    | *String*  | `1.5em`   | The spinning element line width
+Attribute           | Options   | Default   | Description
+---                 | ---       | ---       | ---
+`active`            | *Boolean* | false     | When true, the spinner is shown
+`hover`             | *Boolean* | false     | When true, the spinner hovers over the underlaying content
+`size`              | *Number*  | `100px`   | The size of the spinner
+`color`             | *String*  | `#28b6d8` | The color of the moving part of the spinner
+`line-width`        | *String*  | `1.5em`   | The spinning element line width
+`container-height`  | *Number*  | `150px`   | The size of the spinner container 
 
 
 ## Contributing
