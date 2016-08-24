@@ -1,26 +1,28 @@
 {
-  "name": "spinner-widget",
+  "name": "granite-spinner",
   "authors": [
     "Horacio Gonzalez <horacio.gonzalez@gmail.com>"
   ],
-  "description": "LostInBrittany's pure CSS spinner Polymer web component",
+  "description": "Pure CSS spinner Polymer web component",
   "keywords": [
     "web-component",
     "web-components",
     "polymer",
-    "lostinbrittany",
-    "spinner"
+    "lostinbrittany"
   ],
   "main": "spinner-widget.html",
   "license": "MIT",
-  "homepage": "https://github.com/LostInBrittany/spinner-widget",
+  "homepage": "https://github.com/LostInBrittany/granite-spinner",
   "ignore": [
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#~1.3.1"
+    "polymer": "Polymer/polymer#^1.5.0"
   },
   "devDependencies": {
-    "bootstrap": "~3.3.6",
-    "iron-component-page": "PolymerElements/iron-component-page#~v1.1.0"
+    "iron-component-page": "PolymerElements/iron-component-page#^1.1.6",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.2.3",
+    "paper-styles": "PolymerElements/paper-styles#^1.1.4",
+    "test-fixture": "PolymerElements/test-fixture#^1.1.1",
+    "web-component-tester": "^4.3.0"
   }
 }
