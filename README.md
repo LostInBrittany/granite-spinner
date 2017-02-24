@@ -1,4 +1,4 @@
-# spinner-widget #
+# granite-spinner #
 
 A simple, lightweight spinner [Polymer](https://www.polymer-project.org/) web component
 without any other dependencies.
@@ -6,12 +6,38 @@ without any other dependencies.
 > Polymer 1.3 ready
 
 
+## Doc & demo
+
+[https://lostinbrittany.github.io/granite-spinner](https://lostinbrittany.github.io/granite-spinner)
+
+
+## Usage example
+
+<!--
+```
+<custom-element-demo>
+  <template>
+    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="granite-spinner.html">
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<granite-spinner
+    color="#ff4081" 
+    line-width="2em" 
+    active></granite-spinner>
+```
+
+
 ## Install
 
 Install the component using [Bower](http://bower.io/):
 
 ```sh
-$ bower install LostInBrittany/spinner-widget --save
+$ bower install LostInBrittany/granite-spinner --save
 ```
 
 
@@ -26,13 +52,13 @@ $ bower install LostInBrittany/spinner-widget --save
 2. Import Custom Element:
 
     ```html
-    <link rel="import" href="bower_components/spinner-widget/spinner-widget.html">
+    <link rel="import" href="bower_components/granite-spinner/granite-spinner.html">
     ```
 
 3. Start using it!
 
     ```html
-    <spinner-widget></spinner-widget>
+    <granite-spinner></granite-spinner>
     ```
 
 ## Attributes
