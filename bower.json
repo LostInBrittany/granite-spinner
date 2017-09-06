@@ -10,7 +10,7 @@
     "polymer",
     "lostinbrittany"
   ],
-  "main": "spinner-widget.html",
+  "main": "granite-spinner.html",
   "license": "MIT",
   "homepage": "https://github.com/LostInBrittany/granite-spinner",
   "ignore": [
