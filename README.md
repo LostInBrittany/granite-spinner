@@ -1,3 +1,6 @@
+[![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/LostInBrittanygranite-spinner)
+[![Stars on vaadin.com/directory](https://img.shields.io/vaadin-directory/star/LostInBrittanygranite-spinner.svg)](https://vaadin.com/directory/component/LostInBrittanygranite-spinner)
+
 # granite-spinner #
 
 A simple, lightweight spinner [Polymer](https://www.polymer-project.org/) web component
