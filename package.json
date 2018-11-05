@@ -1,0 +1,28 @@
+{
+  "description": "Pure CSS spinner web component",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "lostinbrittany"
+  ],
+  "homepage": "https://github.com/LostInBrittany/granite-spinner",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LostInBrittany/granite-spinner"
+  },
+  "name": "@granite-elements/granite-spinner",
+  "main": "granite-spinner.js",
+  "author": "Horacio Gonzalez <horacio.gonzalez@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@polymer/lit-element": "^0.6.2",
+    "@polymer/polymer": "^3.0.0"
+  },
+  "devDependencies": {
+    "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "wct-browser-legacy": "^1.0.0"
+  },
+  "version": "3.0.0-0"
+}
